@@ -6,11 +6,19 @@ result
 words = %w[apple pear cat dog apple cat cat horse pear horse]
 result = {}
 words.each do |key|
-  if count == result[key]	
+  if result.has_key? key	
     result[key] += 1
   else
     result[key] = 1
-	puts count
   end
+end
+
+words = %w[apple pear cat dog apple cat cat horse pear horse]
+result = {}
+words.each do |key|
+	unless result.has_key? key
+		result[key] = 0
+	end
+	result[key] += 1
 end
 
