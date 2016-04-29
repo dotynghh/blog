@@ -7,8 +7,11 @@ words = %w[apple pear cat dog apple cat cat horse pear horse]
 result = {}
 words.each do |key|
   if count = result[key]
+	puts "进行if操作"
+	puts count 
     result[key] = count + 1
   else
+	puts "进行else操作"
     result[key] = 1
   end
 end
