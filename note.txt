@@ -15,3 +15,31 @@ lambda & Proc
 	1. lambda会检查代码传递参数,而Proc不会.用自己的话说就是，如果传递的参数没有具体使用，lambda会抛异常，而Proc不会，打印出来的参数是随机值.
 	2. lambda中返回使用return,从自己的方法返回，而Proc/block（有需要的用next）中不能.
 	3.lambda更像一个完整的方法，只不过是匿名的.
+-----------------------------------------------
+-----------------------------------------------
+(1)访问控制权限:
+1.公有实例方法可以通过实例直接访问
+2.私有和被保护的实例方法可以通过公有的实例方法间接访问，不能直接访问
+3.在没有注明实例方法是public或private或protected时，默认为public
+(2)类方法，类常量:
+1.类常量不能直接访问，不能被实例方法直接访问，可以被类方法访问
+2.类方法可以被实例方法调用，调用格式：类名.类方法
+(3)类实例方法 attr_writer:实例属性-------实例属性的getter方法
+attr_reader:实例属性-------实例属性的setter方法
+attr_accessor:实例属性-----实例属性的getter，setter方法
+(4)define_method 自定义setup——accesor方法，作用和attr_accessor相同（理解)
+
+def self.setup_accessor var
+    define_method var do
+      instance_variable_get "@#{var}"   -----------***
+    end
+
+    define_method "#{var}=" do |value|
+      instance_variable_set "@#{var}", value -----------***
+    end
+  end
+
+  setup_accessor :name
+  setup_accessor :age
+-----------------------------------------------
+-----------------------------------------------
