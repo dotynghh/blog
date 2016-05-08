@@ -1,0 +1,32 @@
+#### Blocks can be Object  
+
+```ruby
+class ProcExample
+ def pass_in_block(&action)
+  @stored_proc = action
+ end
+
+ def use_proc(parameter)
+  @store_proc.call(parameter)
+ end
+end
+
+eg = ProcExample.new
+eg.pass_in_block { |param| puts "The parameter is #{param}" }
+eg.use_proc(99)
+# => The parameter is 99
+```
+
+#### Block other method  
+
+```ruby
+def n_times(thing)
+ lambda {|n| thing * n}
+end
+
+p1 = n_times(23)
+p1.call(3) #=> 69
+p2.call(4) #=> 92
+```
+
+call 可以回调block的方法并传递参数

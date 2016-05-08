@@ -13,10 +13,23 @@ class Mark
   end
 end
 
-a = Array.new
-calss << a
+class A
   def hello
-    puts "hello"
+    puts "come from A"
   end
 end
-puts a.hello
+class << A
+  def hello
+    puts "come from Out"
+  end
+end
+puts A.hello
+
+class User
+  class << User
+    def category
+      'User'
+    end
+  end
+end
+user.category
