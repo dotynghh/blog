@@ -1,0 +1,60 @@
+<!--HTML中的注释-->
+<!--网页标准结构-->
+<!--第一部分：文档类型
+作用：要求浏览器必须使用哪种html标准解析网页
+-->
+<!doctype html>
+<!--要求浏览器用最新的html5解析网页
+-->
+<html>
+     <!--head元素
+	 作用：保存网页配置信息的元素不显示在网页正文中
+	 -->
+	 <head>
+          <meta charset="utf-8"/>
+          <!--要求浏览器必须使用utf-8编码解析网页
+		  互联网中最优的编码就是utf-8
+		  所以 html css js文件都要保存成utf-8格式
+		  charset 的设置和文件存储的编码格式一致 通常都是utf-8
+		  -->
+		  <title>我的第一个网页</title>
+	 </head>
+	 <!--boby元素
+	 作用：专门保存网页内容的元素所有网页内容都要放在body中
+	 -->
+	 <body>
+      <h1 style="text-align:center">欢迎光临我的第一个网页</h1>
+	  <!--标题1：大字体，粗体，黑体   h1--到6-->
+	  <p>&emsp;
+	  &lt;<span style="color:blue">HTML</span>&gt;是专门编写页面的语言。学号前端开发<br>我未来的工作是这样的：</p>
+	  <!--段落 写一段话时使用
+	  现象1：空格无效/折叠 解决 &nbsp；代表一个空格
+	  &emsp；代表一个tab
+	  &yen；代表钱
+	  现象2 回车无效
+	  解决：<br>代替回车
+	  现象3：尖括号歧义
+	  解决： &lt；小于号
+	  &gt 大于号
+
+	  -->
+	  <div style="text-align:center">
+	  <a href="http://tts7.tarena.com.cn" target="_blank">
+	  <img src="images/web.jpg" style ="width:600px";/>
+	  </a>
+      </div>
+	  <p>&emsp;如果只会&lt;<span style="color:yellow">Java</span>&gt;,我将来的工作是这样的：</p>
+	  &yen;  &yen;  &yen;  &yen;  &yen;  &yen;
+	  <!--标签分类
+	  封闭标签： 有开始必须有结束
+	  非封闭标签： 只有开始，/结束
+	  分发2：
+	  块元素：独占一行！
+	  如hn p div
+	  行内元素：内容有多大，范围就有多大不会改变原有布局
+      span-->
+	   <img src="images/coder.jpg"/>
+	 </body>
+
+
+</html>
