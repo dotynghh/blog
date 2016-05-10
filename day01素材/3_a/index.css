@@ -1,0 +1,30 @@
+body{background-color:#DDFEE3;}
+div{background-position:center; 
+	background-repeat:no-repeat;
+	text-align:center;}
+
+a{text-decoration:none;}
+div div{height:30px;
+	line-height:30px;
+	color:white;
+	font-weight:bold;}
+#a{background-image: url(images/a.jpg); 
+	height:420px;}
+#b{background-image: url(images/b.png); 
+	height:507px;}
+#c{background-image: url(images/c.png); 
+	height:62px;}
+#钟表,#汽车,#美食,#保健,#酒饮,#母婴{border:3px solid red;}
+#钟表{border:2px red solid;height:538px;}
+#汽车{height:607px;}
+#美食{height:601px;}
+#保健{height:597px;}
+#酒饮{height:599px;}
+#母婴{height:531px;}
+#list{background-image: url(images/hdj.png);
+	position:fixed;
+	top:38%;
+	right:2%;
+	height:425px;
+	width:120px;}
+#first{height:160px;}

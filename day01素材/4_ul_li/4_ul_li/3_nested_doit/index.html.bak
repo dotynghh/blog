@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html> 
+<html> 
+	<head>
+		<meta charset="utf-8"/>
+		<title>影视乐园</title> 
+	</head> 
+	<body>
+	    <ul>
+		<li><a href="#">电影</a>
+		    <ol>
+		      <li><a href="#">银河护卫队</a></li>
+			  <li><a href="#">心花路放</a></li>
+			  <li><a href="#">超体</a></li>
+			  <li><a href="#">星际穿越</a></li>
+		     </ol>
+		</li>
+		<li><a href="#">剧集</a>
+		 <ol>
+		      <li><a href="#">抗战神剧</a></li>
+			  <li><a href="#">大妈神剧</a></li>
+			  <li><a href="#">宅男神剧</a></li>
+		     </ol>
+		</li>
+		<li><a href="#">动漫</a>
+		 <ol>
+		      <li><a href="#">妖精的尾巴</a></li>
+			  <li><a href="#">海贼王</a></li>
+			  <li><a href="#">名侦探柯南</a></li>
+			  <li><a href="#">死神</a></li>
+		     </ol>
+		</li>
+		<li><a href="#">综艺</a>
+		 <ol>
+		      <li><a href="#">天天向上</a></li>
+			  <li><a href="#">军事天地</a></li>
+			  <li><a href="#">曲艺杂谈</a></li>
+			  <li><a href="#"></a></li>
+		     </ol>
+		</li>
+		</ul>
+	</body> 
+</html> 
