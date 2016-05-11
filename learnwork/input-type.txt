@@ -1,0 +1,12 @@
+new input type: email,url,number,range,Date pickers,search,color.  
+email 类型用于应该包含 e-mail 地址的输入域,在提交表单时,会自动验证 email 域的值.  
+url 类型用于应该包含 URL 地址的输入域,在提交表单时,会自动验证 url 域的值.  
+number 类型用于应该包含数值的输入域,还能够设定对所接受的数字的限定:  
+
+```html
+<input type="number" name="points" min="1" max="10" />
+```
+
+range 类型用于应该包含一定范围内数字值的输入域,还能够设定对所接受的数字的限定.  
+search 类型用于搜索域,比如站点搜索或 Google 搜索.  
+date pickers 类型拥有多个可供u选取的日期和时间的新输入类型：date,month,week,time,datetime..
