@@ -1,0 +1,44 @@
+#### <meta>:  
+<meta>元素可以提供有关页面的元信息，它是html语言head区的一个辅助性标签，应用有很多:搜索引擎优化（SEO），定义页面使用语言，自动刷新并指向新的页面，实现网页转换时的动态效果，控制页面缓冲等。  
+##### meta标签的组成：  
+meta标签共有两个属性，它们分别是http-equiv属性和name属性，不同的属性又有不同的参数值，这些不同的参数值就实现了不同的网页功能。  
+#### 1.name属性:  
+meta标签的name属性语法格式:  
+
+```html
+<meta name="参数" content="具体参数">
+```
+
+name属性常用参数:  
+(1).keywords: 用来告诉搜索引擎该网页的关键字  
+(2).description: 用来告诉搜索引擎该网站的主要内容  
+其他参数：robots，author，generator，COPYRIGHT，revisit-after  
+#### 2.http-equiv属性:  
+http-equiv 相当于http的文件头作用，可以向浏览器传回一些有用的信息，以帮助正确和精确地显示网页内容，与之对应的属性值为content，content中的内容其实就是各个参数的变量值.  
+meta标签的http-equiv属性语法格式是:  
+
+```http
+<meta http-equiv="参数" conter="参数变量值">
+```
+
+http-equiv的常用参数:  
+(1).expires 用于设定网页的到期时间，若是网页过期，必须到服务器上重新传输.    
+(2).Refresh 自动刷新并指向新页面  
+
+```html
+<meta http-equiv="Refresh"content="2;URL=http://www.haorooms.com"> 
+```
+
+ps:注意后面的引号，分别在秒数的前面和网址的后面,其中的2是指停留2秒钟后自动刷新到URL网址.  
+(3).Set-cookie 如果网页过期，那么存盘的cookie将被删除.  
+
+```html
+<meta http-equiv="Set-Cookie"content="cookie value=xxx;expires=Friday,12-Jan-200118:18:18GMT；path=/"> 
+```
+
+(4). content-Type 设定页面使用的字符集  
+
+```html
+<meta http-equiv="content-Type" content="text/html;charset=utf-8">
+```
+
