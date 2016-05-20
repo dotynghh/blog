@@ -1,5 +1,26 @@
-<h1>This users page</h1>
+<h1>User registered</h1>
 
-<div class="alert alert-success">
-  Success!
+<div class="row">
+  <div class="col-sm-5">
+    <%= form_for @user, url: users_path, method: :post do |f| %>
+      <div class="form-group">
+        <ul class="list-unstyled">
+          <% @user.errors.messages.values.flatten.each do |error | %>
+            <li><i class="fa fa-exclamation-circle"></i> <%= error %></li>
+            <% end %>
+        </ul>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :username, class: "form-control", placeholder: "username" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.password_field :password, class: "form-control", placeholder: "password" %>
+      </div>
+
+      <%= f.submit "registered", class: "btn btn-primary" %>
+      <%= link_to "Login", new_session_path %>
+      <% end %>
+  </div>
+  <div class="col-sm-7"></div>
 </div>

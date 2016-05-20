@@ -29,6 +29,12 @@
               <li>
                 <a href="/">Home</a>
               </li>
+
+               <% if session[:user_id] %>
+                <li><%= link_to "#{@user.username}, 退出", session_path(@user), method: 'delete' %></li>
+              <% else %>
+                <li><%= link_to "登录", new_session_path %></li>
+              <% end -%>
             </ul>
           </div>
           <!-- /.navbar-collapse -->
