@@ -1,0 +1,71 @@
+#### mysql的安装与rails配置修改  
+mysql的安装  
+Ctrl+alt+T 打开终端
+输入命令：  
+
+```
+sudp apt-get update
+sudo apt-get install mysql-server
+sudo apt-get install mysql-client
+sudo apt-get install libmysqlclient-dev
+```
+
+ps：注意本地开发密码设置为空  
+
+安装完成之后可以通过  
+
+```
+sudo /etc/init.d/mysql start      #启用mysql服务
+mysql -u root -p              #以root用户登录
+```
+
+在这里mysql已经配置完全，可以使用了。  
+
+#### rails的配置  
++ 在没有设置的情况下，rails 的默认数据库使用的是自带的sqlite3,当我们需要更换数据库时，要在项目中的Gemfile文件进行修改，在Gemfile中找到“gem ‘sqlite3’ ”修改为所要更换的数据库名，在这里修改为“ gem ‘mysql2’ ”，如要使用其他数据库自行查找。  
++ 修改config/locales/databases.yml文件，原文件：  
+
+```
+default: &default
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/development.sqlite3
+test:
+  <<: *default
+  database: db/test.sqlite3
+
+production:
+  <<: *default
+  database: db/production.sqlite3
+```
+
+修改后的文件（项目名为circles） ：  
+
+```
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  host: 127.0.0.1
+  username: root
+  password:
+
+development:
+  <<: *default
+  database: circles_development
+test:
+  <<: *default
+  database: circles_test
+production:
+  <<: *default
+  host: 127.0.0.1
+  database: circles_production
+  username: circles
+  password: circles_p_roduction
+```
+
+至此rails配置完成，打开终端在项目路径下运行 rake db：create，进行数据库的移植。

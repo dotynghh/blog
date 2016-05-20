@@ -29,6 +29,7 @@
               <li>
                 <a href="/">Home</a>
               </li>
+
             </ul>
           </div>
           <!-- /.navbar-collapse -->
@@ -36,6 +37,22 @@
         <!-- /.container-->
       </nav>
     </header>
+
+
+
+               <% if session[:user_id] %>
+                <li><%= link_to "#{@user.username}, 退出", session_path(@user), method: 'delete' %></li>
+              <% else %>
+                <li><%= link_to "登录", new_session_path %></li>
+              <% end -%>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-->
+      </nav>
+    </header>
+
 
     <div class="container body-offset">
       <% if flash[:notice] %>
