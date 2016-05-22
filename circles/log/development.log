@@ -99,3 +99,62 @@ Processing by WelcomeController#index as HTML
   [1m[36mUser Load (0.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
   Rendered welcome/index.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-22 15:13:10 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 3093ms (Views: 3081.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-22 15:13:14 +0800
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 58ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-22 15:13:16 +0800
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-22 15:13:18 +0800
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-05-22 15:13:18 +0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2016-05-22 15:13:24 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q590anibwXeHb+bmasoSCym/AJzMjKKVa6jV4+inhOtppwkrBrcUAs5Rr5tSSI/N1CWcJbUPApE0ssXM4JSXiw==", "username"=>"mafeng", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`username` = 'mafeng' AND `users`.`password` = '123456' LIMIT 1
+Redirected to http://localhost:4001/
+Completed 302 Found in 42ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-22 15:13:24 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/sessions/2" for 127.0.0.1 at 2016-05-22 15:13:26 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"m+x9jmfVNxXFnoOgkxNUNmY41ViKf9DPG8DttOx9/SZZ1ADPGfniYIygyt2rkcnwm6JJ4fP8cMtE2v2b5E7uRg==", "id"=>"2"}
+Redirected to http://localhost:4001/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-22 15:13:27 +0800
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 56ms (Views: 55.6ms | ActiveRecord: 0.0ms)
