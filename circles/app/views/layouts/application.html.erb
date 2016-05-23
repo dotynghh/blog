@@ -29,9 +29,9 @@
               <li>
                 <a href="/">Home</a>
               </li>
-
+              <li><a href="<%= users_path %>">用户</a></li>
                <% if session[:user_id] %>
-                <li><%= link_to "#{@user.username}, 退出", session_path(@user), method: 'delete' %></li>
+                <li><%= link_to "#{User.find(session[:user_id]).username}, 退出", session_path(session[:user_id]), method: 'delete' %></li>
               <% else %>
                 <li><%= link_to "登录", new_session_path %></li>
               <% end -%>
@@ -46,7 +46,7 @@
     <div class="container body-offset">
       <% if flash[:notice] %>
         <div class="alert alert-info"><%= flash[:notice] %></div>
-      <% end -%>
+      <% end -%>`
       
       <%= yield %>
     </div>
