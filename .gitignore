@@ -1,5 +1,5 @@
 .byebug_history
 /.bundle
-/log/*
-/tmp
+log/*
+tmp/
 .DS_Store
