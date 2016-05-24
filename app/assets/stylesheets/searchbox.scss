@@ -1,0 +1,90 @@
+.searchbox{
+/*definint width of form element*/
+ width:50px;
+/*centering the form element*/
+ margin:1px auto;
+ position: absolute;
+ right: 120px;
+ top: 10px;
+}
+input[type="search"]{
+
+ padding:5px 10px 5px 10px;
+ font-size:10px;
+ color:#0AF5E8;
+/*removing boder from search box*/
+ border:none;
+/*defining background image as a search symbol*/
+ background-image:url(img/search-btn.png);
+ background-repeat:no-repeat;
+/*background-size*/
+-webkit-background-size:35px 35px;
+ -moz-background-size:35px 35px;
+ -o-background-size:35px 35px;
+ background-size:35px 35px;
+/*positioning background image*/
+ background-position:50px 12px;
+/*changing background color form white*/
+ background-color:#07F0E5;
+}
+/*now using placeholder property to change color of placholder text and making it consitent accross the browser by use of prefix*/
+input[type="search"]::-webkit-input-placeholder{
+ color:#14A7A1;
+}
+input[type="search"]:-moz-placeholder { /* Firefox 18- */
+ color:#14A7A1;
+}
+input[type="search"]::-moz-placeholder { /* Firefox 19+ */
+ color:#14A7A1;
+}
+input[type="search"]:-ms-input-placeholder { /* interner explorer*/
+ color:#14A7A1;
+}
+ul .suggestions li a{
+ display:block;
+/*removing underlines from anchor element*/
+ text-decoration:none; 
+ color:#1f5350;
+ font-size:10px;
+ background-color:#14A7A1;;
+ padding:10px;
+}
+ul .suggestions{
+/*removing predefined bullet points from list*/
+ list-style:none;
+/*removing padding from list items*/
+ padding:0;
+ width:80px;
+}
+ul .suggestions li{
+ margin-bottom:10px;
+ width: 50px;
+}
+/*adding effect when the mouse is hovered over list item*/
+.searchbox ul li a:hover{
+ color:#b23b61;
+ background:#ecd1da;
+}
+/*moving it slightly toware right when hovered*/
+.searchbox ul li:hover{
+/*transform*/
+-webkit-transform:translateX(10px);
+ -moz-transform:translateX(10px);
+ -ms-transform:translateX(10px);
+ -o-transform:translateX(10px);
+ transform:translateX(10px);
+}
+/*now first we will hide the suggestion list*/
+.suggestions li{
+ overflow:hidden;
+ height:0;
+ -webkit-transition:all 0.3s ease-in-out;
+ -moz-transition:all 0.3s ease-in-out;
+ -o-transition:all 0.3s ease-in-out;
+ transition:all 0.3s ease-in-out;
+}
+/*and make the suggestion reappear when user focus on search field*/
+input[type="search"]:focus + .suggestions li{
+ height:30px;
+ width: 170px;
+}
