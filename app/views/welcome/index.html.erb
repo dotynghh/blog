@@ -1,29 +1,8 @@
-
-
-<div class="jumbotron" >
-  <div class="container" >
-    <h1>Hello,word!</h1>
-
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.!</p>
-
-    <p>
-      <a href="#" class="btn btn-primary btn-lg" role="button">Learn more >>!</a>
-    </p>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <h2>Heading</h2>
-      <img src="ha.jpg"/>
-    </div>
-    <div class="col-md-4">
-      <h2>Heading</h2>
-    </div>
-    <div class="col-md-4">
-      <h2>Heading</h2>
-    </div>
-  </div>
-</div>
-
+<% if @user %>
+  <h1>欢迎你, <%= @user.username %></h1>
+<% else %>
+  <h1>Circles 首 页</h1>
+  <p>
+    
+  </p>  
+<% end -%>
