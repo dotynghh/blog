@@ -1,0 +1,5 @@
+<tr>
+  <td><%=article.title %></td>
+  <td><%=User.find_by(username: article.user_id) .username%></td>
+  <td><%=article.category %></td>
+</tr>

@@ -1,8 +1,24 @@
 <% if @user %>
-  <h1>欢迎你, <%= @user.username %></h1>
+    <h1></h1>
 <% else %>
-  <h1>Circles 首 页</h1>
-  <p>
-    
-  </p>  
+    <h1>Blog 首 页</h1>
 <% end -%>
+<center>
+    <form action="<%= search_articles_path %>" method="get" >
+      article：<input type="text" name="title" value="<%= params[:title] %>" />
+      <input type="submit" name="搜索" value="搜索">
+      <a href="/">发表文章</a>
+    </form>
+</center>
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table">
+            <tr>
+                <th>title</th>
+                <th>auth</th>
+                <th>category</th>
+            </tr>
+        <%= render partial: "all_articles", collection: @articles, as: :article %>
+        </table>
+    </div>
+</div>
