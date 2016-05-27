@@ -30,19 +30,6 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse nav-submenu-color collapse" id="bs-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right custom">
-              <li>
-              <form class="searchbox" action="">
-                <input type="search" placeholder="search.." />
-                <ul class="suggestions">
-                  <li><a href="#">10 Flat Designs that can chan...</a></li>
-                  <li><a href="#">Download Flat design search...</a></li>
-                  <li><a href="#">How Flat Design can make y...</a></li>
-                  <li><a href="#">Why Flat Design is future tre...</a>
-                </ul>
-              </form>
-              </li>
-            </li>
-             
                <% if session[:user_id] %>
                 <li><%= link_to "#{User.find(session[:user_id]).username}, 退出", session_path(session[:user_id]), method: 'delete' %></li>
               <% else %>

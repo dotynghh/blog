@@ -3,20 +3,27 @@
 <% else %>
     <h1>Blog 首 页</h1>
 <% end -%>
-<center>
-    <form action="<%= search_articles_path %>" method="get" >
-      article：<input type="text" name="title" value="<%= params[:title] %>" />
-      <input type="submit" name="搜索" value="搜索">
-      <a href="/">发表文章</a>
-    </form>
-</center>
+<div class="row">
+    <div class="col-sm-9">
+        <form class="form-inline" action="<%= search_articles_path %>" method="get" >
+            <label for="article">article</label>
+            <input type="text" class="form-control" name="title" value="<%= params[:title] %>" />
+            <input class="btn btn-default" type="submit" name="搜索" value="搜索">
+        </form>
+    </div>
+    <div class="col-sm-3">
+         <a class="btn btn-default" href="<%= new_article_path %>">发表文章</a>
+    </div>
+</div>
+
 <div class="row">
     <div class="col-sm-12">
-        <table class="table">
+        <table class="table table-striped">
             <tr>
                 <th>title</th>
                 <th>auth</th>
                 <th>category</th>
+                <th>编辑</th>
             </tr>
         <%= render partial: "all_articles", collection: @articles, as: :article %>
         </table>
